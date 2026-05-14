@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Social Creator - Post Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    colors: {
+                        charcoal: '#1A1A1A',
+                        accent: {
+                            purple: '#833AB4',
+                            pink: '#FD1D1D',
+                            orange: '#F56040',
+                        }
+                    },
+                    backgroundImage: {
+                        'insta-gradient': 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80)',
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at top right, #fdfbfb 0%, #ebedee 100%);
+            min-height: 100vh;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .instagram-gradient-text {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .aspect-square {
+            aspect-ratio: 1 / 1;
+        }
+        .caption-container {
+            scrollbar-width: thin;
+            scrollbar-color: #E0E0E0 transparent;
+        }
+        .caption-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        .caption-container::-webkit-scrollbar-thumb {
+            background-color: #E0E0E0;
+            border-radius: 10px;
+        }
+        .btn-hover-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-charcoal">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-insta-gradient rounded-lg flex items-center justify-center shadow-lg">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <span class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-charcoal to-gray-500">
+                    AI Social Creator
+                </span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-charcoal transition-colors">Dashboard</a>
+                <a href="#" class="hover:text-charcoal transition-colors">Templates</a>
+                <a href="#" class="hover:text-charcoal transition-colors">Archive</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="px-4 py-2 text-sm font-semibold rounded-full border border-gray-200 hover:bg-gray-50 transition-all">
+                    Share
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            
+            <!-- Hero Header Section -->
+            <div class="mb-10 text-center md:text-left">
+                <h1 class="text-3xl md:text-4xl font-bold mb-3 tracking-tight text-charcoal">
+                    Post Preview
+                </h1>
+                <p class="text-gray-500 text-lg">Your generated content is ready for review and publishing.</p>
+            </div>
+
+            <!-- Main Preview Card -->
+            <div class="glass-card rounded-[32px] overflow-hidden shadow-glass flex flex-col md:grid md:grid-cols-2">
+                
+                <!-- Image Section -->
+                <div class="p-6 md:p-10 flex items-center justify-center bg-gray-50/50">
+                    <div class="relative w-full aspect-square group">
+                        <!-- Decorative glow -->
+                        <div class="absolute -inset-1 bg-insta-gradient rounded-[20px] blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                        
+                        <!-- Image Container -->
+                        <div class="relative bg-white rounded-[16px] overflow-hidden shadow-xl aspect-square w-full">
+                            <div class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+                                <img src='https://opal.google/board/blobs/e397ba47-1a35-47ac-b4af-3aa18b0317b0' alt='media_1' class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content/Caption Section -->
+                <div class="p-6 md:p-10 flex flex-col h-full border-t md:border-t-0 md:border-l border-gray-100">
+                    
+                    <!-- Student ID Tag -->
+                    <div class="mb-6">
+                        <span class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-bold bg-indigo-50 text-indigo-700 border border-indigo-100">
+                            學號：M11321021
+                        </span>
+                    </div>
+
+                    <!-- Caption Editor View -->
+                    <div class="flex-grow flex flex-col">
+                        <div class="flex items-center justify-between mb-3">
+                            <label class="text-xs font-bold uppercase tracking-widest text-gray-400">Post Caption</label>
+                            <span class="text-xs text-gray-400">421 Characters</span>
+                        </div>
+                        <div id="captionArea" class="caption-container relative bg-gray-50/80 rounded-2xl p-6 text-gray-800 leading-relaxed whitespace-pre-wrap font-normal text-[15px] border border-gray-100 h-full max-h-[350px] overflow-y-auto">
+沉浸在昨晚極致的感官盛宴中 🎶✨
+
+每一個音符都深深觸動著靈魂，現場的震撼力遠超乎想像。看著燈光點亮整個場館，感受著萬人合唱的共鳴，那一刻的美好，已化作心中永恆的印記。🎸
+
+感謝這場精彩絕倫的演出，帶給我們無限的力量與感動。生活需要音樂，也需要像這樣純粹的快樂時刻。💙
+
+下一場驚喜，你準備好跟誰一起去了嗎？✨
+
+<span class="text-blue-600 font-medium">#演唱會 #音樂之夜 #現場震撼 #生活儀式感 #悸動瞬間</span>
+                        </div>
+                        
+                        <!-- Actions -->
+                        <div class="mt-6 flex flex-col gap-3">
+                            <button onclick="copyCaption()" class="group flex items-center justify-center gap-2 w-full py-3 px-4 bg-white border border-gray-200 rounded-xl font-semibold text-gray-700 hover:bg-gray-50 transition-all active:scale-95">
+                                <svg class="w-5 h-5 text-gray-400 group-hover:text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                                </svg>
+                                <span>Copy Caption</span>
+                            </button>
+                            
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="btn-hover-effect flex items-center justify-center gap-2 py-3.5 px-4 bg-charcoal text-white rounded-xl font-bold text-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                    Download Image
+                                </button>
+                                <button class="btn-hover-effect flex items-center justify-center gap-2 py-3.5 px-4 bg-insta-gradient text-white rounded-xl font-bold text-sm shadow-lg shadow-orange-500/20">
+                                    Generate New
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Meta Info (Extra SaaS Touch) -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white/50 rounded-2xl border border-gray-100 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase">Est. Engagement</p>
+                        <p class="text-xl font-bold text-charcoal">High Potential</p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white/50 rounded-2xl border border-gray-100 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-500 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase">Best Time to Post</p>
+                        <p class="text-xl font-bold text-charcoal">Tonight, 8:00 PM</p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white/50 rounded-2xl border border-gray-100 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase">Hashtag Score</p>
+                        <p class="text-xl font-bold text-charcoal">98 / 100</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Footer-like Branding -->
+            <div class="mt-16 pt-8 border-t border-gray-200 flex flex-col items-center justify-center">
+                <div class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-opacity">
+                    <div class="w-5 h-5 bg-insta-gradient rounded-sm"></div>
+                    <span class="text-sm font-bold tracking-widest uppercase">AI Social Creator</span>
+                </div>
+                <p class="mt-2 text-xs text-gray-400">Transforming ideas into social presence.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function copyCaption() {
+            const captionElement = document.getElementById('captionArea');
+            const text = captionElement.innerText;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.currentTarget;
+                const originalContent = btn.innerHTML;
+                
+                btn.innerHTML = `
+                    <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-green-600">Copied!</span>
+                `;
+                btn.classList.add('border-green-200', 'bg-green-50');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.remove('border-green-200', 'bg-green-50');
+                }, 2000);
+            });
+        }
+
+        // Simple entrance animation
+        window.addEventListener('DOMContentLoaded', () => {
+            const card = document.querySelector('.glass-card');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
+            
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
