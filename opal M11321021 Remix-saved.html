@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icyball 冰球樂團 | 成人浪漫專題報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            deep: '#0f172a',
+                            gold: '#fbbf24',
+                            magenta: '#ec4899',
+                            cyan: '#06b6d4',
+                            retro: '#f43f5e'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #fbbf24, #ec4899, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .media-container {
+            position: relative;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .media-container video, .media-container img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 4px;
+            width: 18px;
+            height: 18px;
+            background: #f43f5e;
+            border-radius: 50%;
+            border: 4px solid #020617;
+        }
+        .custom-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero / Title Section -->
+    <header class="relative min-h-[40vh] flex flex-col items-center justify-center text-center px-4 py-20 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-retro rounded-full blur-[120px] animate-pulse-slow"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-cyan rounded-full blur-[120px] animate-pulse-slow"></div>
+        </div>
+        
+        <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-4 animate-float">
+            icyball <span class="text-gradient">冰球樂團</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-light tracking-widest text-slate-400 uppercase">
+            Adult Romance • Neo-Retro • City Pop
+        </p>
+        <div class="mt-8 px-6 py-2 glass-card rounded-full text-sm font-semibold tracking-widest border-brand-retro/30">
+            M11321021
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 space-y-24 pb-20">
+
+        <!-- 1. 置頂：資訊圖表 -->
+        <section id="infographic" class="space-y-8">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent to-slate-700"></div>
+                <h2 class="text-2xl font-bold tracking-widest text-brand-gold uppercase">01. Infographic</h2>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent to-slate-700"></div>
+            </div>
+            
+            <div class="media-container group">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-end p-8">
+                    <p class="text-white/80 font-medium italic">冰球樂團 (icyball) 核心概念資訊圖表 — 成人浪漫與新復古視覺</p>
+                </div>
+                <img src='https://opal.google/board/blobs/b21bcdbb-0ced-4afb-92a2-345473457444' alt='icyball Infographic' class="transition-transform duration-700 group-hover:scale-105" />
+            </div>
+        </section>
+
+        <!-- 2. 置中：短影片 -->
+        <section id="video-content" class="space-y-8 flex flex-col items-center">
+            <div class="flex items-center gap-4 w-full mb-8">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent to-slate-700"></div>
+                <h2 class="text-2xl font-bold tracking-widest text-brand-magenta uppercase">02. Visual Experience</h2>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent to-slate-700"></div>
+            </div>
+
+            <div class="w-full md:w-4/5 lg:w-3/4">
+                <div class="media-container ring-4 ring-brand-magenta/20">
+                    <video src='https://opal.google/board/blobs/0d61995e-a002-4ca2-a80b-29586d18e431' alt='icyball video' controls class="aspect-video w-full"></video>
+                </div>
+                <p class="mt-6 text-center text-slate-400 italic font-light">
+                    細膩捕捉「成人浪漫」氛圍，展現 90 年代復古節奏藍調之美。
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. 置底：報告內容 -->
+        <section id="report" class="space-y-12">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent to-slate-700"></div>
+                <h2 class="text-2xl font-bold tracking-widest text-brand-cyan uppercase">03. Report Content</h2>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent to-slate-700"></div>
+            </div>
+
+            <!-- Bento Grid Layout for Summary -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-8 rounded-3xl md:col-span-2 border-l-4 border-l-brand-gold">
+                    <h3 class="text-3xl font-bold mb-4">樂團定位</h3>
+                    <p class="text-slate-300 leading-relaxed text-lg">
+                        冰球樂團 (icyball) 為台灣當代四人編制樂團，以<span class="text-brand-gold font-bold">「成人浪漫」 (Adult Romance)</span> 為核心概念。成功地將復古元素轉化為符合當代品味的流行樂，展現了台灣獨立樂團商業化轉型的成熟典範。
+                    </p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl border-t-4 border-t-brand-magenta flex flex-col justify-center">
+                    <h3 class="text-xl font-bold mb-2 text-brand-magenta">音樂風格</h3>
+                    <p class="text-slate-300">融合 Funk、Disco、Acid-jazz，近期轉向 90s R&B 與 New Jack Swing。</p>
+                </div>
+            </div>
+
+            <!-- Members Section -->
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold border-b border-slate-800 pb-2">一、 基本介紹與成員組成</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    冰球樂團成立於 2013 年，其團名發想自「癌細胞」之諧音。樂團曾於 2020 年短暫休息後回歸，隨後與何樂音樂展開合作。目前成員分工明確：
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="glass-card p-6 rounded-2xl hover:bg-slate-800 transition-colors cursor-default group">
+                        <span class="text-brand-cyan font-bold block mb-1">主唱 Vocalist</span>
+                        <h4 class="text-xl font-bold group-hover:text-brand-cyan transition-colors">王 (王昭權)</h4>
+                        <p class="text-sm text-slate-400 mt-2">聲線具備磁性且充滿挑逗感。</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl hover:bg-slate-800 transition-colors cursor-default group">
+                        <span class="text-brand-cyan font-bold block mb-1">團長 Bassist</span>
+                        <h4 class="text-xl font-bold group-hover:text-brand-cyan transition-colors">Nelson (吳冠男)</h4>
+                        <p class="text-sm text-slate-400 mt-2">負責樂團律動支柱。</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl hover:bg-slate-800 transition-colors cursor-default group">
+                        <span class="text-brand-cyan font-bold block mb-1">鍵盤手 Keyboardist</span>
+                        <h4 class="text-xl font-bold group-hover:text-brand-cyan transition-colors">蒙 (蒙捷文)</h4>
+                        <p class="text-sm text-slate-400 mt-2">主導樂團編曲與合成器氛圍。</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl hover:bg-slate-800 transition-colors cursor-default group">
+                        <span class="text-brand-cyan font-bold block mb-1">鼓手 Drummer</span>
+                        <h4 class="text-xl font-bold group-hover:text-brand-cyan transition-colors">士捷 (林士捷)</h4>
+                        <p class="text-sm text-slate-400 mt-2">綽號 4J，常於 MV 中擔綱男主角。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Style Section -->
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold border-b border-slate-800 pb-2">二、 音樂風格與藝術特質</h3>
+                <div class="glass-card p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-brand-deep">
+                    <p class="text-slate-300 leading-relaxed text-lg">
+                        冰球樂團的音樂被定義為<span class="text-brand-retro font-bold">「新復古浪漫」 (Neo-Retro Romance)</span>，深受七〇與八〇年代音樂影響。早期風格奠基於放克 (Funk)、迪斯可 (Disco) 與合成器流行 (Synth-pop)。
+                    </p>
+                    <p class="mt-4 text-slate-300 leading-relaxed text-lg">
+                        隨著音樂發展，樂團於 2025 年末轉向更為成熟的九〇年代復古節奏藍調 (R&B) 以及新傑克搖擺 (New Jack Swing)，將早期的城市流行 (City Pop) 元素進化為細膩的現代聽感。其歌詞擅長描繪都會男女的曖昧與寂寞，探討現代社會中的「輕感情關係」。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Timeline Section -->
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold border-b border-slate-800 pb-2">三、 2023-2026 年重大里程碑</h3>
+                <div class="relative ml-4 border-l border-slate-700 pl-8 space-y-12 py-4">
+                    <div class="relative">
+                        <span class="timeline-dot"></span>
+                        <h4 class="text-xl font-bold text-brand-gold">2023 年：作品奠基</h4>
+                        <p class="text-slate-400 mt-1">發行 EP 《Boyz on Top》，單曲〈愛做的事〉引發社群熱議。</p>
+                    </div>
+                    <div class="relative">
+                        <span class="timeline-dot"></span>
+                        <h4 class="text-xl font-bold text-brand-gold">2024 年：跨界合作與大型場館</h4>
+                        <p class="text-slate-400 mt-1">推出單曲〈不小心〉(宋芸樺合作)。於 Zepp New Taipei 舉辦「早安晚安好喜歡」演唱會創下佳績。</p>
+                    </div>
+                    <div class="relative">
+                        <span class="timeline-dot"></span>
+                        <h4 class="text-xl font-bold text-brand-gold">2025 年：第三張專輯發行</h4>
+                        <p class="text-slate-400 mt-1">與溫嵐合作單曲〈一個吻的時間〉。12 月發行專輯《我很抱歉》 (I'm Sorry)，主打歌〈Dumplings〉引發舞蹈熱潮。</p>
+                    </div>
+                    <div class="relative">
+                        <span class="timeline-dot"></span>
+                        <h4 class="text-xl font-bold text-brand-gold text-2xl">2026 年：場館飛躍與亞洲巡迴</h4>
+                        <ul class="list-disc list-inside text-slate-300 mt-2 space-y-2">
+                            <li><span class="font-bold text-white">首登北流：</span> 5 月首度於台北流行音樂中心舉辦大型演唱會，門票一分鐘內完售。</li>
+                            <li><span class="font-bold text-white">亞洲巡演：</span> 6 月轉往香港麥花臣場館演出。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion & References -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-green-500">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        簡要結論
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        精準抓住了年輕族群對「非典型愛情」的情感共鳴，是台灣獨立樂團商業化轉型的成熟典範。
+                    </p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        引用文獻來源
+                    </h3>
+                    <ul class="text-sm text-slate-400 space-y-1">
+                        <li>1. 一事無成的老編 (2025-2026 報導)</li>
+                        <li>2. 存在音樂 (Being Music) 官方報導 (2026)</li>
+                        <li>3. 關鍵評論網 (The News Lens) 專訪 (2026)</li>
+                        <li>4. 何樂音樂官方新聞稿</li>
+                        <li>5. 維基百科與 KKBOX 作品紀錄資料庫</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="custom-footer text-center bg-brand-deep/50">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-slate-400 tracking-widest text-lg">
+                【主題探索報告】by <span class="italic text-red-600 font-bold">Famidoc Chang</span>
+            </p>
+            <p class="mt-2 text-slate-500 font-mono text-sm">
+                M11321021
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
